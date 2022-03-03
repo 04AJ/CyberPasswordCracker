@@ -19,4 +19,4 @@ Password Cracker Project
 * Program will continue running until user closes terminal
 
 Credit:
-Brute force algorithm was inspired by [@andrew1234's algorithm](https://www.geeksforgeeks.org/print-all-the-permutation-of-length-l-using-the-elements-of-an-array-iterative/)
+Brute force algorithm was inspired by [@andrew1234's permutation algorithm](https://www.geeksforgeeks.org/print-all-the-permutation-of-length-l-using-the-elements-of-an-array-iterative/)
