@@ -9,12 +9,11 @@ list = [((line.encode('utf-8')).strip()).split() for line in secList]
 
 key = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
        'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~']
+arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+       'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
 #        'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-       'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
 # MD5 hash
@@ -134,7 +133,6 @@ def mbrute(n, arr, Len, L, actual, start):
         n //= Len
         nWord += word
         if len(nWord) == L:
-            print(nWord)
             if md5hash(nWord.encode()).decode() == actual:
                 end = dt.datetime.now()
                 print("Password: {} in {}".format(nWord, end - start))
@@ -151,7 +149,6 @@ def sbrute(n, arr, Len, L, actual, start):
         n //= Len
         nWord += word
         if len(nWord) == L:
-            print(nWord)
             if sha(nWord.encode()).decode() == actual:
                 end = dt.datetime.now()
                 print("Password: {} in {}".format(nWord, end - start))
@@ -168,7 +165,6 @@ def bbrute(n, arr, Len, L, actual, start):
         n //= Len
         nWord += word
         if len(nWord) == L:
-            print(nWord)
             if bcrypt.checkpw(nWord.encode('utf-8'), pswd):
                 end = dt.datetime.now()
                 print("Password: {} in {}".format(nWord, end - start))
