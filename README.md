@@ -14,7 +14,7 @@ Password Cracker Project
 ### Option 2 (IDE)
 ~ If command line fails
 * Dowload the entire folder (including cracker.py file and the secList.txt file)
-* Open CyberPasswordCracker folder in IED of choice 
+* Open CyberPasswordCracker folder in IDE of choice 
 * Ensure bycrypt is imported ($ pip install bcrypt)
 * Program will continue running until user closes terminal
 
